@@ -27,5 +27,11 @@ Heading | Discription
 "NorthIG" | North Irish Grid Reference number.
 
 ### *
+> From Wikipedia - [Irish Transverse Mercator](https://en.wikipedia.org/wiki/Irish_Transverse_Mercator).
+
+> _"**Irish Transverse Mercator (ITM)** is the geographic coordinate system for Ireland."_
 
 ### **
+> From Wikipedia - [Irish grid reference system](https://en.wikipedia.org/wiki/Irish_grid_reference_system).
+
+> _"The **Irish grid reference system** is a system of geographic grid references commonly used in Ireland (both Northern Ireland and the Republic of Ireland)."_
