@@ -60,4 +60,34 @@ The following is the first entry of the dataset in JSON formate. This will give 
   }
   ```
 
-## Accessing The Data
+## Accessing The Dataset
+#### Receiving A List of All Parks
+You can recive a list of all the parks in Galway, using the HTTP GET method, at the following URL:
+
+*"http://galwayparksapi.com/parks/all"*
+
+In this case, using "all" after ".../parks/" will return an array of all the parks, in JSON format.
+
+**Example:**
+```json
+[
+  {
+    "OBJECTID":1,
+    "NUMBER":1,
+    "NAME":"Corrib Park",
+    "LOCATION":"Newcastle, Galway",
+    "AREAOFCITY":"City- West",
+    "OPENINGHRs":"No restricted opening hours",
+    "FACILITIES":"Passive Recreational Walkways, 3G Artificial Surface Pitch, Multi- Use Games Area(MUGA), Planting areas with flowers, sh",
+    "DESCR":"Local Neighbourhood Park",
+    "Lat":53.279,
+    "Long":-9.075,
+    "EastITM":528328.238,
+    "NorthITM":725961.154,
+    "EastIG":128361.999,
+    "NorthIG":225932.124
+  },
+  { ... },
+  { ... }
+]
+```
