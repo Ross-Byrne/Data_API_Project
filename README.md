@@ -91,3 +91,39 @@ In this case, using "all" after ".../parks/" will return an array of all the par
   { ... }
 ]
 ```
+
+### Accessing Lists of Parks Using Filters
+You can request a list of parks based on a filter, such as, all parks with a tennis court etc.
+The following in a URL example of the format you would use to achieve this.
+
+*"http://galwayparksapi.com/parks/[filter]=[parameter]"*
+
+Now, replace [filter] with a field from the dataset, which could be any of the fields including: objectid, number, name, location. etc.
+
+Then replace [parameter] with the results you are looking for. An example would look like this.
+
+**Example One**
+
+*http://galwayparksapi.com/parks/location="Newcastle,Galway"/*
+
+This would return an array of all the parks that have that location, in JSON format.
+If there isn't any park with that location, an empty array is returned.
+
+**Example Two**
+
+Another example could look like the following:
+
+*http://galwayparksapi.com/parks/facilities="pitch"*
+
+This would return an array of any park that has any type of pitch listed in its facilities section.
+
+#### Multiple Filters
+To search for parks in a more complex fasion, by using more then one filter, is just as easy as using one filter
+
+**Example**
+
+Say you want to get the users location data and search for the park closest to them. You could easily do this, using the users longitude and latitude, with a GET method, as follows:
+
+*http://galwayparksapi.com/parks/?long=userLongitude&lat=userLatitude/*
+
+Explain...
