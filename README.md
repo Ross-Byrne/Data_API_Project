@@ -126,7 +126,7 @@ Just like with a single filter and parameter, replacing [filter] with the field 
 
 **Example**
 
-*http:/galwayparksapi.com/parks/?facilities=tennis+court&areaofcity=city+west*
+*http://galwayparksapi.com/parks/?facilities=tennis+court&areaofcity=city+west*
 
 This is using two filters and will return an array of parks that have a tennis court and are in city west.
 
@@ -139,3 +139,7 @@ Say you want to get the users location data and search for the park closest to t
 *http://galwayparksapi.com/parks/closest-long-lat/*
 
 This will return an array of all the parks, starting with the park that is closest to the longitude and latitude coordinates provided.
+
+*http://galwayparksapi.com/parks/closest-long-lat/[number]*
+
+Replacing [number] with the number of parks you want to be given back eg. 5 closest parks,this will return the specified number of results, starting with the park that is closest to the specified longitude and latitude.
