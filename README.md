@@ -120,7 +120,7 @@ This would return an array of any park that has any type of pitch listed in its 
 #### Multiple Filters
 To search for parks in a more complex fasion, by using more then one filter, is just as easy as using one filter.
 
-*http:/galwayparksapi.com/parks/?[filter]=[parameter]&[filter]=[parameter]*
+*http://galwayparksapi.com/parks/?[filter]=[parameter]&[filter]=[parameter]*
 
 Just like with a single filter and parameter, replacing [filter] with the field you are seaching for, such as facilities or openinghrs, and replacing [parameter] with the values you are looking for such as tennis court, you get a list of all the parks that satisfy that condition. As you can see with multiple filters, you can repeat the proccess of [filter]=[parameter] by separating them with a **'&'** symbol.
 
@@ -140,6 +140,18 @@ Say you want to get the users location data and search for the park closest to t
 
 This will return an array of all the parks, starting with the park that is closest to the longitude and latitude coordinates provided.
 
+You might also want to limit the number of results returned by the POST method. This can be done using the following URL:
+
 *http://galwayparksapi.com/parks/closest-long-lat/[number]*
 
-Replacing [number] with the number of parks you want to be given back eg. 5 closest parks,this will return the specified number of results, starting with the park that is closest to the specified longitude and latitude.
+Replace [number] with the number of parks you want to be given back eg. the 5 closest parks. This will return the specified number of results, starting with the park that is closest to the specified longitude and latitude.
+
+Limiting the number of results returned back would look like this:
+
+*http://galwayparksapi.com/parks/closest-long-lat/6*
+
+This returns the 6 closest parks to the longitude and latitude used in the POST method.
+
+## Conclusion
+
+Conclusion.
