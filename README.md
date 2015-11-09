@@ -5,14 +5,14 @@ A third year Data Representation and Querying Project 2015. A project to design 
 ## Introduction
 This project provides the design and documentation for the dataset "Parks in Galway City" which is available at [data.gov.ie](http://data.gov.ie).
 
-The **Parks in Galway City** Dataset contains information about all of the public parks that can be found in Galway City. This could be a particularly useful dataset to hook into if creating an information application based on Galway City. Whether this API is used solely for the parks in Galway or as part of a larger application, accessing this information, including the location data, could be an integral part of an application. 
+The **Parks in Galway City** Dataset contains information about all of the public parks that can be found in Galway City. This could be a particularly useful dataset to hook into if creating an information application based on Galway City. Whether this API is used solely for the parks in Galway or as part of a larger application accessing this information, including the location data, could be an integral part of an application. 
 
 ## About The Parks In Galway City Dataset
 The dataset comes in the form of a .CSV file which I have converted  into JSON, making it easier to work with. The dataset currently, at the time of writing, has 29 entries. Each entry has 14 columns with the following headings:
 
-Heading | Discription  
+Heading | Description  
 ---------|-----------
-"OBJECTID" | An id given to each park. 
+"OBJECTID" | An ID given to each park. 
 "NUMBER" | A number given to each park.
 "NAME" | Name of the park.
 "LOCATION" | Location of park eg. "Newcastle, Galway".
@@ -20,8 +20,8 @@ Heading | Discription
 "OPENINGHRs" | Opening hours of the park.
 "FACILITIES" | Facilities in the park eg. Tennis Courts, Dressing Rooms, etc.
 "DESCR" | A description of the park eg. "Local Neighbourhood Park".
-"Lat" | the latitude coordinate of the park.
-"Long" | the longitude coordinate of the park.
+"Lat" | The latitude coordinate of the park.
+"Long" | The longitude coordinate of the park.
 "EastITM" | Irish Transverse Mercator (ITM) East value. *
 "NorthITM" | Irish Transverse Mercator (ITM) North vaule.
 "EastIG" | East Irish Grid Reference number. **
@@ -38,7 +38,7 @@ Heading | Discription
 > _"The **Irish grid reference system** is a system of geographic grid references commonly used in Ireland (both Northern Ireland and the Republic of Ireland)."_
 
 ## Example Entry
-The following is the first entry of the dataset in JSON formate. This will give you an understanding of how the data is layed out using the above headings.
+The following is the first entry of the dataset in JSON format. This will give you an understanding of how the data is laid out using the above headings.
 
 ```json
 {
@@ -61,7 +61,7 @@ The following is the first entry of the dataset in JSON formate. This will give 
 
 ## Accessing The Dataset
 #### Receiving A List of All Parks
-You can recive a list of all the parks in Galway, using the HTTP POST method, at the following URL:
+You can receive a list of all the parks in Galway, using the HTTP POST method, at the following URL:
 
 *http://galwayparksapi.com/parks/all*
 
@@ -93,7 +93,7 @@ In this case, using "all" after ".../parks/" will return an array of all the par
 
 ### Accessing Lists of Parks Using Filters
 You can request a list of parks based on a filter, such as, all parks with a tennis court etc using the HTTP GET method.
-The following in a URL example of the format you would use to achieve this.
+The following is a URL example of the format you would use to achieve this.
 
 *http://galwayparksapi.com/parks/?[filter]=[parameter]*
 
@@ -117,7 +117,7 @@ Another example could look like the following:
 This would return an array of any park that has any type of pitch listed in its facilities section.
 
 #### Multiple Filters
-To search for parks in a more complex fasion, by using more then one filter, is just as easy as using one filter.
+To search for parks in a more complex fashion, by using more then one filter, is just as easy as using one filter.
 
 *http://galwayparksapi.com/parks/?[filter]=[parameter]&[filter]=[parameter]*
 
@@ -129,11 +129,11 @@ Just like with a single filter and parameter, replacing [filter] with the field 
 
 This is using two filters and will return an array of parks that have a tennis court and are in city west.
 
-This method can be used with many different filters but remember, the more filters you use, the more narrow your search is. This can result in getting back very few results or none at all.
+This method can be used with many different filters but remember, the more filters you use, the more narrow your search will be. This can result in getting back very few results or none at all.
 
 #### Getting A List of Parks Closest To Current Location
 
-Say you want to get the users location data and search for the park closest to them. You could easily do this, using the users longitude and latitude, with a POST method, using the following URL:
+Lets say you want to get the users location data and search for the park closest to them. You could easily do this, using the users longitude and latitude, with a POST method, using the following URL:
 
 *http://galwayparksapi.com/parks/closest-long-lat/*
 
@@ -153,4 +153,4 @@ This returns the 6 closest parks to the longitude and latitude used in the POST 
 
 ## Conclusion
 
-Due to the nature of the dataset, mainly because it is a dataset of parks, users may not add or remove entries. It would not make sense, simply because an average user is not going to be building parks or tearing down exsisting ones.
+Due to the nature of the dataset, mainly because it is a dataset of parks, users may not add or remove entries. It would not make sense, simply because an average user is not going to be building parks or tearing down existing ones.
