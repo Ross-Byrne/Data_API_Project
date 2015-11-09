@@ -8,8 +8,7 @@ This project provides the design and documentation for the dataset "Parks in Gal
 The **Parks in Galway City** Dataset contains information about all of the public parks that can be found in Galway City. This could be a particularly useful dataset to hook into if creating an information application based on Galway City. Whether this API is used solely for the parks in Galway or as part of a larger application, accessing this information, including the location data, could be an integral part of an application. 
 
 ## About The Parks In Galway City Dataset
-The dataset comes in the form of a .CSV file which I have converted  into JSON, making it easier to work with.
-The dataset has 14 columns with the following headings:
+The dataset comes in the form of a .CSV file which I have converted  into JSON, making it easier to work with. The dataset currently, at the time of writing, has 29 entries. Each entry has 14 columns with the following headings:
 
 Heading | Discription  
 ---------|-----------
@@ -154,4 +153,4 @@ This returns the 6 closest parks to the longitude and latitude used in the POST 
 
 ## Conclusion
 
-Conclusion.
+Due to the nature of the dataset, mainly because it is a dataset of parks, users may not add or remove entries. It would not make sense, simply because an average user is not going to be building parks or tearing down exsisting ones.
